@@ -1,0 +1,48 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-section {
+    background-image: url('images/DBSTournament.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.hero-section h1,
+.hero-section p {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.btn {
+    background-color: #E6E6E6;
+    color: #000;    
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #7FC8EB;
+}
+
+.mt-5 {
+    text-shadow: 2px 2px 4px rgba(139, 139, 139, 0.7);
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(6px);
+}
+
+.navbar .nav-link {
+    color: #FFFFFF   !important;
+}
+
+.navbar .nav-link:hover {
+    color: #4EAFFF !important;
+}

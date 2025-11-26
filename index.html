@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dragon Ball</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #0A3D62;">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <a class="navbar-brand me-auto" href="#home">
+                    <img src="images/dragonBallLogo.png" class="img-fluid" alt="Dragon Ball" style="height: 70px;">
+                </a>
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#characters">Universe 7</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id=home class="hero-section d-flex flex-column justify-content-center align-items-center text-center">
+        <h1 class="display-4 fw-bold mb-4" style="color: #FF6A00;">Universe 7's Elite Team</h1>
+        <p class="lead text-white ">Explore every fighter who stood together to protect Universe 7 from erasure.</p>
+        <a class="btn mt-5" href="#characters" role="button">Go to Gallery</a>
+    </div>
+
+    <div class="container-fluid" id="characters" style="background-color: #0D0D0D;">
+        <div class="row">
+            <div class="col">
+                <h2 id="characters" class="my-5 fw-bold text-center " style="color:#FF6A00;">Meet the Universe 7
+                    Team</h2>
+            </div>
+        </div>
+
+        <div class="row" id="content">
+        </div>
+    </div>
+
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+
+    <script>
+        universe7 = [
+            {
+                name: "Goku",
+                image: "images/Goku.png",
+                description: "The Saiyan warrior with an insatiable appetite for battle and food."
+            },
+            {
+                name: "Vegeta",
+                image: "images/Vegeta.png",
+                description: "The proud Saiyan prince known for his fierce rivalry with Goku."
+            },
+            {
+                name: "Gohan",
+                image: "images/Gohan.png",
+                description: "Goku's eldest son, a scholar and a powerful fighter when needed."
+            },
+            {
+                name: "Frieza",
+                image: "images/Frieza.png",
+                description: "The tyrannical overlord who reluctantly joined forces with Universe 7."
+            },
+            {
+                name: "Piccolo",
+                image: "images/Piccolo.png",
+                description: "The wise Namekian warrior and mentor to Gohan."
+            },
+            {
+                name: "Krillin",
+                image: "images/Krillin.png",
+                description: "Goku's best friend and a skilled martial artist."
+            },
+            {
+                name: "Android 18",
+                image: "images/Android18.png",
+                description: "A former enemy turned ally, known for her strength and wit."
+            },
+            {
+                name: "Android 17",
+                image: "images/Android17.png",
+                description: "A cool and collected warrior with a strong sense of justice."
+            },
+            {
+                name: "Master Roshi",
+                image: "images/MasterRoshi.png",
+                description: "The legendary martial arts master with a quirky personality."
+            },
+            {
+                name: "Tien Shinhan",
+                image: "images/Tien.png",
+                description: "A disciplined fighter known for his unique techniques and dedication."
+            },
+            {
+                name: "Lord Beerus",
+                image: "images/Beerus.png",
+                description: "The God of Destruction with immense power and a laid-back attitude."
+            },
+            {
+                name: "Whis",
+                image: "images/Whis.png",
+                description: "The angelic attendant and mentor to Lord Beerus."
+            }
+        ];
+
+
+        var content = document.getElementById('content');
+        for (var i = 0; i < universe7.length; i++) {
+            content.innerHTML += `
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+                <div class="card" style="width: 18rem; background-color: rgba(0,0,0,0.6); color: white;">
+                    <img src="`+ universe7[i].image + `" class="card-img-top" alt="` + universe7[i].name + `">
+                    <div class="card-body">
+                        <h5 class=" pt-3 card-title fw-bold" style="color:#8FD9FF;">`+ universe7[i].name + ` </h5>
+                        <p class="card-text">`+ universe7[i].description + `</p>
+                    </div>
+                </div>
+            </div>
+            `;
+        };
+    </script>
+</body>
+
+</html>
