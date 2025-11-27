@@ -17,17 +17,18 @@ body {
 }
 
 .btn {
-    background-color: #E6E6E6;
-    color: #000;    
+    background-color: #FFD600;
+    color: #000;
     font-weight: 600;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 15px 25px;
+    border-radius: 20px;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #7FC8EB;
+    background-color: #000000;
+    color: #FFD600;
 }
 
 .mt-5 {
@@ -40,9 +41,26 @@ body {
 }
 
 .navbar .nav-link {
-    color: #FFFFFF   !important;
+    color: #FFD600 !important;
 }
 
 .navbar .nav-link:hover {
-    color: #4EAFFF !important;
+    color: #00B0FF !important;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-color: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }

@@ -34,19 +34,36 @@
 
     <div id=home class="hero-section d-flex flex-column justify-content-center align-items-center text-center">
         <h1 class="display-4 fw-bold mb-4" style="color: #FF6A00;">Universe 7's Elite Team</h1>
-        <p class="lead text-white ">Explore every fighter who stood together to protect Universe 7 from erasure.</p>
-        <a class="btn mt-5" href="#characters" role="button">Go to Gallery</a>
+        <p class="lead text-white">Welcome to the official character showcase of Universe 7, one of the most iconic
+            universes in the Dragon Ball Super
+            multiverse. <br> Explore every fighter who stood together to protect their Universe from erasure.</p>
+        <a class="btn mt-3" href="#characters" role="button">Go to Gallery</a>
     </div>
 
     <div class="container-fluid" id="characters" style="background-color: #0D0D0D;">
         <div class="row">
             <div class="col">
-                <h2 id="characters" class="my-5 fw-bold text-center " style="color:#FF6A00;">Meet the Universe 7
-                    Team</h2>
+                <h2 id="characters" class="my-5 fw-bold text-center " style="color:#FF6A00;">Meet the Universe 7's
+                    Leader and their Team</h2>
             </div>
         </div>
 
-        <div class="row" id="content">
+        <div class="row" id="contentLeader">
+
+        </div>
+
+
+
+        <div class="row" id="contentTeam">
+        </div>
+    </div>
+
+    <div id="footer" class="container-fluid">
+        <div class="row">
+            <div class="col text-center bg-dark py-4" style="color: #FF6A00;">
+                Dragon Ball Gallery
+                <p class="small text-white">© 2025 All rights reserved.</p>
+            </div>
         </div>
     </div>
 
@@ -54,76 +71,31 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
         </script>
 
+    <script src="data.js"></script>
+
     <script>
-        universe7 = [
-            {
-                name: "Goku",
-                image: "images/Goku.png",
-                description: "The Saiyan warrior with an insatiable appetite for battle and food."
-            },
-            {
-                name: "Vegeta",
-                image: "images/Vegeta.png",
-                description: "The proud Saiyan prince known for his fierce rivalry with Goku."
-            },
-            {
-                name: "Gohan",
-                image: "images/Gohan.png",
-                description: "Goku's eldest son, a scholar and a powerful fighter when needed."
-            },
-            {
-                name: "Frieza",
-                image: "images/Frieza.png",
-                description: "The tyrannical overlord who reluctantly joined forces with Universe 7."
-            },
-            {
-                name: "Piccolo",
-                image: "images/Piccolo.png",
-                description: "The wise Namekian warrior and mentor to Gohan."
-            },
-            {
-                name: "Krillin",
-                image: "images/Krillin.png",
-                description: "Goku's best friend and a skilled martial artist."
-            },
-            {
-                name: "Android 18",
-                image: "images/Android18.png",
-                description: "A former enemy turned ally, known for her strength and wit."
-            },
-            {
-                name: "Android 17",
-                image: "images/Android17.png",
-                description: "A cool and collected warrior with a strong sense of justice."
-            },
-            {
-                name: "Master Roshi",
-                image: "images/MasterRoshi.png",
-                description: "The legendary martial arts master with a quirky personality."
-            },
-            {
-                name: "Tien Shinhan",
-                image: "images/Tien.png",
-                description: "A disciplined fighter known for his unique techniques and dedication."
-            },
-            {
-                name: "Lord Beerus",
-                image: "images/Beerus.png",
-                description: "The God of Destruction with immense power and a laid-back attitude."
-            },
-            {
-                name: "Whis",
-                image: "images/Whis.png",
-                description: "The angelic attendant and mentor to Lord Beerus."
-            }
-        ];
+        var contentLeader = document.getElementById('contentLeader');
+        for (var i = 0; i < Leader.length; i++) {
+            contentLeader.innerHTML += `
+            <div class="col-12 col-sm-12 col-md-4 mb-4 d-flex justify-content-center">
+                <div class="card" style="width: 30rem; background-color: rgba(0,0,0,0.6); color: white;">
+                    <img src="`+ Leader[i].image + `" class="card-img-top" alt="` + Leader[i].name + `">
+                    <div class="card-body">
+                        <h5 class=" pt-3 card-title fw-bold" style="color:#8FD9FF;">`+ Leader[i].name + ` </h5>
+                        <p class="card-text">`+ Leader[i].description + `</p>
+                    </div>
+                </div>
+            </div>
+            `;
+        };
+    </script>
 
-
-        var content = document.getElementById('content');
+    <script>
+        var contentTeam = document.getElementById('contentTeam');
         for (var i = 0; i < universe7.length; i++) {
-            content.innerHTML += `
+            contentTeam.innerHTML += `
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
-                <div class="card" style="width: 18rem; background-color: rgba(0,0,0,0.6); color: white;">
+                <div class="card" style="width: 25rem; background-color: rgba(0,0,0,0.6); color: white;">
                     <img src="`+ universe7[i].image + `" class="card-img-top" alt="` + universe7[i].name + `">
                     <div class="card-body">
                         <h5 class=" pt-3 card-title fw-bold" style="color:#8FD9FF;">`+ universe7[i].name + ` </h5>
